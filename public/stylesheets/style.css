@@ -1,0 +1,476 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --primary-color: rgb(219, 235, 187);
+    --secondary-color: rgb(11, 5, 0);
+    --tertiary-color: rgb(177, 207, 117);
+    --quaternary-color: rgb(170, 210, 255);
+    --quinary-color: rgb(231, 146, 255);
+    --senary-color: rgb(171, 97, 192);
+    --delete-color: rgb(195, 0, 42);
+    --delete-hover: rgb(137, 0, 30);
+}
+body, html {
+    height: 100%;
+    font-family: sans-serif;
+    background-color: rgb(219, 235, 187);
+}
+
+.wrapper {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    height: fit-content;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+header{
+    background-color: var(--secondary-color);
+}
+
+.inner-head {
+    height: 135px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    height: 30%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.inner-head div h1 {
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.inner-head div {
+    height: 70%;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+}
+
+main, .your-posts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    margin: 160px 0 0 0;
+}
+
+ol {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+}
+
+li {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.post {
+    width: 90%;
+    min-height: 100px;
+    background-color: var(--secondary-color);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px 10px;
+    margin: 0 0 10px 0;
+    border-radius: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: color .1s;
+}
+
+a:hover {
+    color: var(--tertiary-color);
+}
+
+.btn-no-style{
+    background-color: var(--primary-color);
+    border-style: none;
+    height: 20px;
+    width: 50px;
+    font-size: 15px;
+    color: var(--secondary-color);
+}
+
+.btn-no-style:hover{
+    background-color: var(--tertiary-color);
+}
+
+.post-link {
+    font-size: 20px;
+}
+
+.post-list {
+    margin: 0;
+    padding: 0;
+}
+
+.post-text {
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+    padding: 5px 0 5px 5px;
+    background-color: var(--quinary-color);
+}
+
+.title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: var(--primary-color);
+}
+
+.post-text span {
+    width: 100%;
+}
+
+/* styling for login */
+.login-form, .new-post, .update-post {
+    background-color: var(--secondary-color);
+    min-height: 500px;
+    width: 60%;
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.login-form {
+    justify-content: space-between;
+}
+
+.login-form div {
+    background-color: var(--quaternary-color);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 2px;
+}
+
+.login-form div input{
+    border: var(--tertiary-color) solid 1px;
+    border-radius: 3px;
+    width: 90%;
+    height: 40px;
+    text-align: center;
+}
+
+.btn-login {
+    height: 80px;
+    width: 100%;
+    background-color: var(--quinary-color);
+    color: var(--secondary-color);
+    font-size: 35px;
+    border-style: none;
+    border-radius: 2px;
+}
+
+.btn-login:hover {
+    background-color: var(--senary-color);
+}
+
+/* styling for signup */
+.signup-form {
+    background-color: var(--secondary-color);
+    min-height: 500px;
+    width: 60%;
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.signup-form div {
+    background-color: var(--quaternary-color);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 2px;
+}
+
+.signup-form div input{
+    border: var(--tertiary-color) solid 1px;
+    border-radius: 3px;
+    width: 90%;
+    height: 40px;
+    text-align: center;
+}
+
+.btn-signup {
+    height: 80px;
+    width: 100%;
+    background-color: var(--quinary-color);
+    color: var(--secondary-color);
+    font-size: 35px;
+    border-style: none;
+    border-radius: 2px;
+}
+
+.btn-signup:hover {
+    background-color: var(--senary-color);
+}
+
+/* styling for comments */
+.comments {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.comment {
+    width: 90%;
+    min-height: fit-content;
+    background-color: var(--secondary-color);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 10px;
+    margin: 0 0 10px 0;
+    border-radius: 2px;
+}
+
+.text {
+    height: fit-content;
+    width: 100%;
+    border-radius: 2px;
+    padding: 5px;
+    margin: 7px;
+    background-color: var(--quaternary-color);
+}
+
+.text p {
+    width: 100%;
+    height: 100%;
+}
+
+/* styling comment form */
+.comment-form {
+    width: 90%;
+    min-height: 100px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px 0;
+    margin: 0 0 10px 0;
+    border-radius: 2px;
+}
+
+.comment-form div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-form div textarea{
+    border-color: var(--tertiary-color);
+    min-height: 200px;
+    min-width: 100%;
+    max-height: 200px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    resize: none;
+}
+
+.comment-form div button {
+    width: 100%;
+    height: 40px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    font-size: 22px;
+}
+
+/* styling dashboard */
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.create-post-form {
+    position: fixed;
+    bottom: 0;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 10px 0;
+}
+
+.create-post-form button {
+    height: 70px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 3px;
+    color: var(--primary-color);
+    font-size: 30px;
+}
+
+.my-posts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    min-height: 50px;
+    height: fit-content;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+.my-posts h3, .my-posts h2{
+    color: var(--primary-color);
+}
+
+.new-post, .update-post {
+    justify-content: space-around;
+}
+.new-post h2, .update-post h2{
+    color: var(--primary-color);
+}
+
+.new-post-form, .update-post-form {
+    background-color: var(--quaternary-color);
+    height: 350px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.new-post-form div, .update-post-form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.new-post-form div label, .update-post-form div label {
+    font-size: 30px;
+}
+
+.new-post-form div textarea, .update-post-form div textarea {
+    resize: none;
+}
+
+#post-title, #post-text, .btn, .edit-btn, .delete-btn{
+    width: 60%;
+}
+
+#post-title {
+    height: 40px;
+}
+
+#post-text{
+    height: 80px;
+}
+
+.btn{
+    height: 34px;
+    background-color: var(--quinary-color);
+    color: var(--secondary-color);
+    font-size: 22px;
+    border: var(--secondary-color) solid 2px;
+}
+
+.btn:hover{
+    background-color: var(--senary-color);
+    color: var(--quinary-color);
+}
+
+.edit-btn, .delete-btn{
+    height: 30px;
+    font-size: 20px;
+}
+
+.edit-btn {
+    border: var(--secondary-color) solid 2px;
+    background-color: var(--quinary-color);
+    color: var(--delete-hover);
+}
+
+.edit-btn:hover{
+    background-color: var(--senary-color);
+    color: var(--secondary-color);
+}
+
+.delete-btn{
+    border: var(--secondary-color) solid 2px;
+    background-color: var(--delete-color);
+    color: var(--secondary-color);
+}
+
+.delete-btn:hover{
+    background-color: var(--delete-hover);
+    color: var(--quinary-color);
+}

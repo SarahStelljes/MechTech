@@ -1,0 +1,21 @@
+<section>
+    <form class="create-post-form" action="/dashboard/create-post">
+        <button type="submit">Create New Post</button>
+    </form>
+    {{#if posts.length}}
+    <div class="your-posts">
+        <ol>
+            {{#each posts as |post|}}
+            <li class="post-li" id="post-li-{{post.id}}">
+                <div class="my-posts" id="{{post.id}}">
+                    <h2>{{post.title}}</h2>
+                    <h3>{{format_date post.created_at}}</h3>
+                </div>
+            </li>
+            {{/each}}
+        </ol>
+    </div>
+    {{/if}}
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/javascript/dashboard.js"></script>

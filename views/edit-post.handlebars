@@ -1,0 +1,20 @@
+<section>
+    <div class="update-post">
+        <h2>Update Post</h2>
+        <form class="update-post-form">
+            {{#with post as | post |}}
+            <div>
+                <label for="post-title">Title</label>
+                <textarea id="post-title" name="post-title">{{post.title}}</textarea>
+            </div>
+            <div>
+                <label for="post-text">Text</label>
+                <textarea id="post-text" name="post-text">{{post.post_text}}</textarea>
+            </div>
+            {{/with}}
+            <button type="submit" class="edit-btn">Edit</button>
+            <button type="button" class="delete-btn">Delete</button>
+        </form>
+    </div>
+</section>
+<script src="/javascript/update-post.js"></script>
