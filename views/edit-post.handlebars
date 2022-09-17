@@ -5,11 +5,11 @@
             {{#with post as | post |}}
             <div>
                 <label for="post-title">Title</label>
-                <textarea id="post-title" name="post-title">{{post.title}}</textarea>
+                <textarea id="post-title" name="post-title" minlength="1" maxlength="100">{{post.title}}</textarea>
             </div>
             <div>
                 <label for="post-text">Text</label>
-                <textarea id="post-text" name="post-text">{{post.post_text}}</textarea>
+                <textarea id="post-text" name="post-text" minlength="4" maxlength="2000">{{post.post_text}}</textarea>
             </div>
             {{/with}}
             <button type="submit" class="edit-btn">Edit</button>

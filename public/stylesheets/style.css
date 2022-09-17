@@ -142,6 +142,14 @@ a:hover {
 
 .post-link {
     font-size: 20px;
+    max-width: 80%;
+}
+.post-link span{
+    word-wrap: break-word;
+    max-width: 100%;
+}
+.title h4{
+    max-width: 20%;
 }
 
 .post-list {
@@ -166,6 +174,7 @@ a:hover {
 
 .post-text span {
     width: 100%;
+    word-wrap: break-word;
 }
 
 /* styling for login */
@@ -388,6 +397,11 @@ section {
 
 .my-posts h3, .my-posts h2{
     color: var(--primary-color);
+}
+
+.my-posts h2{
+    max-width: 80%;
+    word-wrap: break-word;
 }
 
 .new-post, .update-post {

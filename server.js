@@ -12,9 +12,16 @@ const hbs = exphbs.create({ helpers });
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// set idle timeout
+const one_hour = 1000 * 60 * 60;
+const half_hour = one_hour / 2;
+
+// set up session
 const sess = {
     secret: 'Super secret secret',
-    cookie: {},
+    cookie: {
+        maxAge: half_hour
+    },
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
@@ -35,7 +42,7 @@ app.use(routes);
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-// turon on connection to db server
+// turn on on connection to db server
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening.'));
 });
